@@ -19,22 +19,22 @@ def send_email():
     server.send(b'AUTH LOGIN\r\n')
     server.recv(1024)
 
-    server.send(base64.b64encode(b'faruk5308atik@gmail.com') + b'\r\n')
+    server.send(base64.b64encode(b'göndericimail@gmail.com') + b'\r\n')
     server.recv(1024)
 
-    server.send(base64.b64encode(b'pkti gtov yxck ecxx') + b'\r\n')
+    server.send(base64.b64encode(b'Uygulamaya Tanımlı Şifre Yöntemi şifresi ') + b'\r\n')
     server.recv(1024)
 
-    server.send(b'MAIL FROM: <faruk5308atik@gmail.com>\r\n')
+    server.send(b'MAIL FROM: <göndericimail>\r\n')
     server.recv(1024)
 
-    server.send(b'RCPT TO: <faruk.atik@bil.omu.edu.tr>\r\n')
+    server.send(b'RCPT TO: <alıcı mail>\r\n')
     server.recv(1024)
 
     server.send(b'DATA\r\n')
     server.recv(1024)
 
-    message = "Subject: 1\r\n\r\nBu bir test mailidir.\r\n.\r\n"
+    message = "Subject: Merhaba Dünya\r\n\r\nBu bir test mailidir.\r\n.\r\n"
     server.send(message.encode())
     server.recv(1024)
 
