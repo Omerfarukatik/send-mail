@@ -19,7 +19,7 @@ def send_email():
     server.send(b'gmailin base64 ile kodlanmış halini giriniz.\r\n')  
     server.recv(1024)
 
-    server.send(b'şifrenin base64 ile kodlanmış halini giriniz\r\n') 
+    server.send(b'Uygulamaya Tanımlı Şifre Yöntemi ile oluşturulan şifrenin base64 ile kodlanmış halini giriniz\r\n') 
     server.recv(1024)
 
     server.send(b'MAIL FROM: <göndericimail@gmail.com>\r\n')
